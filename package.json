@@ -23,7 +23,9 @@
     "test": "karma start --singleRun true",
     "test:watch": "karma start --singleRun false",
     "posttest": "istanbul check-coverage --statement 75 --branch 50 --function 50",
-    "typings": "rimraf typings/ && typings install"
+    "typings": "rimraf typings/ && typings install",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "keywords": [
     "react",
@@ -52,7 +54,7 @@
     "react-bootstrap": "^0.30.2",
     "react-dom": "^15.3.0",
     "react-dropzone": "^3.6.0",
-    "react-router": "^2.6.1",
+    "react-router": "^2.5.2",
     "react-router-bootstrap": "^0.23.1",
     "winston": "^2.1.1",
     "autoprefixer": "^6.3.3",
@@ -101,11 +103,8 @@
     "postcss-loader": "^0.9.1",
     "postcss-modules-local-by-default": "^1.0.2",
     "raw-loader": "^0.5.1",
-    "react": "^15.3.0",
     "react-addons-test-utils": "^15.3.0",
-    "react-dom": "^15.3.0",
     "react-redux": "^4.4.4",
-    "react-router": "^2.5.2",
     "react-router-redux": "^4.0.5",
     "redux": "^3.4.0",
     "redux-form": "^5.3.2",
@@ -128,6 +127,8 @@
     "webpack-dev-server": "^1.14.1",
     "webpack-hot-middleware": "^2.12.0",
     "webpack-split-by-path": "0.0.10",
-    "whatwg-fetch": "^1.0.0"
-  }
+    "whatwg-fetch": "^1.0.0",
+    "snyk": "^1.316.1"
+  },
+  "snyk": true
 }
